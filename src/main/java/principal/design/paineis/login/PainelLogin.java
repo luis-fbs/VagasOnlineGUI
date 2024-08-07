@@ -1,5 +1,7 @@
 package principal.design;
 
+import principal.actionListeners.BotaoCadastrarActionListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,6 +23,7 @@ public class PainelLogin {
         buttonGroup.add(empresaRadioButton);
         Button entrarButton = new Button("Entrar");
         Button cadastrarButton = new Button("cadastrar");
+        cadastrarButton.addActionListener(new BotaoCadastrarActionListener());
 
         painelAuxiliar.add(credencialLabel);
         painelAuxiliar.add(credencialField);
