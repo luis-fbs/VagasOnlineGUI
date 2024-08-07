@@ -1,5 +1,7 @@
 package principal.design.paineis.cadastro;
 
+import principal.actionListeners.BotaoCadastrarPessoaActionListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -23,6 +25,9 @@ public class PainelCadastroPessoa {
         JScrollPane curriculoScrollPane = new JScrollPane(curriculoArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         JButton fotoButton = new JButton("Imagem", UIManager.getIcon("FileView.directoryIcon"));
         JButton cadastrarButton = new JButton("Cadastrar");
+        cadastrarButton.addActionListener(new
+                BotaoCadastrarPessoaActionListener(cpfField, curriculoArea,
+                nomeField, senhaField));
 
         painelDados.add(cpfLabel);
         painelDados.add(cpfField);
