@@ -39,7 +39,7 @@ public class BotaoCadastrarPessoaActionListener implements ActionListener {
             HttpRequest request = HttpRequest.newBuilder(new URI(url))
                                              .method("POST", HttpRequest.BodyPublishers.ofString(json))
                                              .build();
-            HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            client.send(request, HttpResponse.BodyHandlers.discarding());
 
         }catch (Exception exception){}
     }
