@@ -1,5 +1,7 @@
 package principal.design;
 
+import principal.design.paineis.login.PainelLogin;
+
 import javax.swing.*;
 
 public class Design {
