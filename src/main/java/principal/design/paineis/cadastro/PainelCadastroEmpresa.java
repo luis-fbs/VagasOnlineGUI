@@ -1,5 +1,8 @@
 package principal.design.paineis.cadastro;
 
+import principal.actionListeners.BotaoCadastrarEmpresaActionListener;
+import principal.actionListeners.BotaoCadastrarPessoaActionListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -19,6 +22,8 @@ public class PainelCadastroEmpresa {
         JTextField senhaField = new JTextField();
         JButton fotoButton = new JButton("Imagem", UIManager.getIcon("FileView.directoryIcon"));
         JButton cadastrarButton = new JButton("Cadastrar");
+        cadastrarButton.addActionListener(new
+                BotaoCadastrarEmpresaActionListener(cnpjField, nomeField, senhaField));
 
         painelDados.add(cnpjLabel);
         painelDados.add(cnpjField);
