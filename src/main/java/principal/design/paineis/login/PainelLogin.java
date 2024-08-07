@@ -1,4 +1,4 @@
-package principal.design;
+package principal.design.paineis.login;
 
 import principal.actionListeners.BotaoCadastrarActionListener;
 
