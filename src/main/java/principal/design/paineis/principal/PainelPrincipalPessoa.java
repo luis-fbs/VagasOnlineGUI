@@ -11,6 +11,7 @@ public class PainelPrincipalPessoa {
         JLabel nome = new JLabel(pessoa.getNome(), JLabel.CENTER);
         nome.setFont(new Font(Font.SERIF, Font.BOLD, 20));
         JLabel curriculo = new JLabel(pessoa.getCurriculo());
+        JScrollPane curriculoJScrollPane = new JScrollPane(curriculo, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
         painelPricipalPessoa.add(nome);
         painelPricipalPessoa.add(curriculo);
