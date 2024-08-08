@@ -2,6 +2,7 @@ package principal.actionListeners;
 
 import principal.design.DesignPaginaPrincipalEmpresa;
 import principal.design.DesignPaginaPrincipalPessoa;
+import principal.usuario.UltimoLoginUsado;
 import principal.util.Conversor;
 import principal.util.ReferenciaURL;
 
@@ -43,7 +44,8 @@ public class BotaoEntrarActionListener implements ActionListener {
                         .build();
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
                 if (!response.body().isBlank()){
-
+                    UltimoLoginUsado.identificacao = credencial.getText();
+                    UltimoLoginUsado.senha = senha.getText();
                     DesignPaginaPrincipalPessoa
                             .getDesignPaginaPrincipalPessoa(Conversor.jsonParaPessoa(response.body()));
                 } else{
@@ -68,6 +70,8 @@ public class BotaoEntrarActionListener implements ActionListener {
                         .build();
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
                 if (!response.body().isBlank()){
+                    UltimoLoginUsado.identificacao = credencial.getText();
+                    UltimoLoginUsado.senha = senha.getText();
                     DesignPaginaPrincipalEmpresa.getDesignPaginaPrincipalEmpresa(Conversor.jsonParaEmpresa(response.body()));
                 } else{
                     JOptionPane.showMessageDialog(null, "Credenciais não batem", "Aviso", JOptionPane.INFORMATION_MESSAGE);
