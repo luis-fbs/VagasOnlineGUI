@@ -1,5 +1,7 @@
 package principal.design.paineis.cadastro;
 
+import principal.actionListeners.BotaoCadastrarVagaActionListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,6 +18,7 @@ public class PainelCadastroVagaEmpresa {
         JTextArea descricaoArea = new JTextArea();
         JScrollPane descricaoJScrollPane = new JScrollPane(descricaoArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         JButton cadastrarVagaButton = new JButton("Cadastrar");
+        cadastrarVagaButton.addActionListener(new BotaoCadastrarVagaActionListener(cargoTextField, descricaoArea));
 
         painelDados.add(cargoLabel);
         painelDados.add(cargoTextField);
