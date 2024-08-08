@@ -20,8 +20,9 @@ public class Conversor {
         return gson.fromJson(json, Empresa.class);
     }
 
-    public static ArrayList<Vaga> jsonParaListaDeVagas(String json){
+    public static ArrayList<Vaga> jsonParaListaDeVagas(String json) {
         Gson gson = new Gson();
-        return gson.fromJson(json, new TypeToken<Vaga>(){}.getType());
+        Type vagaListType = new TypeToken<ArrayList<Vaga>>() {}.getType();
+        return gson.fromJson(json, vagaListType);
     }
 }
