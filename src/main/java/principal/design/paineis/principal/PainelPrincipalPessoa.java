@@ -14,7 +14,7 @@ public class PainelPrincipalPessoa {
         JScrollPane curriculoJScrollPane = new JScrollPane(curriculo, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
         painelPricipalPessoa.add(nome);
-        painelPricipalPessoa.add(curriculo);
+        painelPricipalPessoa.add(curriculoJScrollPane);
 
         return painelPricipalPessoa;
     }
