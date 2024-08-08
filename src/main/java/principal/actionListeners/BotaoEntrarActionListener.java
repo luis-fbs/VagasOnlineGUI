@@ -1,7 +1,7 @@
 package principal.actionListeners;
 
-import principal.design.paineis.DesignPaginaPrincipalEmpresa;
-import principal.design.paineis.DesignPaginaPrincipalPessoa;
+import principal.design.DesignPaginaPrincipalEmpresa;
+import principal.design.DesignPaginaPrincipalPessoa;
 import principal.util.Conversor;
 import principal.util.ReferenciaURL;
 
