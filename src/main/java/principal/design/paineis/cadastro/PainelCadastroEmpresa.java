@@ -1,7 +1,6 @@
 package principal.design.paineis.cadastro;
 
 import principal.actionListeners.BotaoCadastrarEmpresaActionListener;
-import principal.actionListeners.BotaoCadastrarPessoaActionListener;
 
 import javax.swing.*;
 import java.awt.*;
