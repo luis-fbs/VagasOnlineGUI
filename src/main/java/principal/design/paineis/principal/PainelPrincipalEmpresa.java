@@ -1,5 +1,6 @@
 package principal.design.paineis.principal;
 
+import principal.design.paineis.vagas.PainelDeVagas;
 import principal.usuario.Empresa;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ public class PainelPrincipalEmpresa {
         nome.setFont(new Font(Font.SERIF, Font.BOLD, 20));
 
         painelPricipalEmpresa.add(nome);
+        painelPricipalEmpresa.add(PainelDeVagas.getPainelDeVagas(empresa.getVagasCadastradas()));
 
         return painelPricipalEmpresa;
     }
